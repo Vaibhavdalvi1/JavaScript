@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SetTimeout Example</title>
+    </head>
+    <p id = time></p>
+    <body>
+        <script>
+            function intro(name,text ){
+                console.log("hello good morning"+ " " + name+ " "+ text);
+            }
+            
+            setTimeout(intro,5000,"Vaibhav","Good luck");
+
+            function education(degree,marks ){
+                console.log(  degree+ " "+ marks);
+            }
+            
+            setTimeout(education,6000,"Bsc(computer)",67.7 ,);
+
+
+            function showTime(){
+                time = new Date();
+                console.log(time);
+                document.getElementById('time').innerHTML = time;
+            }
+
+            setInterval(showTime,1000);
+            
+    
+        </script>
+    </body>
+</html>

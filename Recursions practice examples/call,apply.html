@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Call/Apply methods</title>
+    </head>
+    <body>
+
+        <script>
+            let name = {
+                firstname:"Vaibhav",
+                lastname:"Dalvi",
+            }
+            
+            let fullName = function (hometown, state) {
+                console.log(this.firstname + "  " + this.lastname +" " + "from" + " " + hometown + "," + state);
+            }
+            
+            fullName.call(name,"Nashik","Maharashtra");
+            
+            let name2 = {
+                firstname:"Rahul",
+                lastname:"Pekhale",
+            }
+
+            fullName.call(name2, "Mumbai","maharashtra");
+            fullName.apply(name2, ["Mumbai","maharashtra"]);
+
+
+
+            fullnam
+            
+        </script>
+    </body>
+</html>

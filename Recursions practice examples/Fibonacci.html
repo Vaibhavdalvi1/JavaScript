@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FibonacciExample</title>
+        <script>
+            // 2 type of recursion iterative approach and recursive approach
+            // * Iterative Approach
+            /*function fibonacci(num){
+
+                let num1 =0;
+                let num2 =1;
+                let x =0;
+                for(let i=2; i<=num; i++){
+                    x = num1+num2;
+                    num1=num2;
+                    num2=x;
+                }
+
+                return x;
+            }
+
+            let x = fibonacci(6)
+            console.log(x);*/
+
+
+
+            // recursive approach
+
+            function fibonacci(num){
+
+                if(num<=2) return 1;
+                return fibonacci(num-1)+ fibonacci(num-2);
+            }
+
+                let result = fibonacci(8);
+            
+                console.log(result);
+
+
+
+
+
+
+        </script>
+    </head>
+</html>

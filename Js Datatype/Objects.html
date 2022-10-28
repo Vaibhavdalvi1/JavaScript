@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Practice </title>
+
+    </head>
+    <body>
+
+    <h2>     Objects practice examples    </h2>
+    <h3>Employee personal details</h3>
+
+    <script>
+
+        const employee = {
+
+
+            empid: 036,
+            empFirstName:"Vaibhav",
+            empLastName:"Dalvi",
+            empAge:25,
+            Address:"Sinnar",
+            MobNumber:987654423,
+            Email:"Vd@gmail.com",
+            DateOfBirth:20/06/1997,
+            AdharNo:"",
+
+            empFamilyDetails:{
+                FatherName:"Bhaskar",
+                Age:50,
+                MotherName:"Pushpa",
+                Age:45,
+                SisterName:"Kaveri"
+
+            },                           //nested object
+
+            EmpVehicleInfo:[
+
+                {Type:"car"},
+                  { VehicleName:"Bolero"},
+                    {color:"Red"},
+                    {vehicleNo:"MH15RT!440"}
+
+
+            ],                 // use nasted array and object 
+
+                get Age() {
+                return this.empAge;    // using a getter ( get keyword)
+                },
+                
+                set Adhar(Adhar){
+                    this.AdharNo = Adhar; }   // using a setter (set keyword)
+            
+                  
+            
+         };/*
+
+         //Object Constructor Methods
+
+
+         function employee(id,first,last,age,address,mob,email,adhar){
+            this.empid = id;
+            this.empFirstName = first;
+            this.empLastName = last;
+            this.empAge = age;
+            this.Address = address;
+            this.MobNumber = mob;
+            this.Email = email;
+            this.AdharNo = adhar;
+         }
+
+         const employee2 = new employee(111,"rahil","pekhale",24,"sinnar",9876543245,"rp@gmail.com",123456789876);
+         const employee3 = new employee(2,"rohit","pagar",26,"wavi",5464654654,"rp@gmail.com",9887654433333);
+         const employee4 = new employee(6,"prakash","dalvi",27,"sinnar",9876543245,"pd@gmail.com",123456789876);
+
+
+
+         console.log(employee2);
+         console.log(employee3);
+         console.log(employee4);*/
+
+
+
+
+
+                employee.Adhar="12345677657";
+                employee.FullName = function() {
+                return (this.empFirstName + " " + this.empLastName).toUpperCase();  // using built in methods
+                }
+               document.write(employee.empFamilyDetails.FatherName); //  Access nested object
+
+               document.write("<br></br>");
+               document.write(employee.EmpVehicleInfo); //  Access nested Array and object
+
+               document.write("<br></br>");
+               document.write(employee.FullName());
+
+               document.write("<br></br>");
+               document.write(employee.Age);
+
+               document.write("<br></br>");
+               document.write(employee.AdharNo);
+
+
+
+
+
+
+            </script>
+
+    </body>
+
+</html>
