@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Property flags and descriptors Example2
+        </title>
+    </head>
+
+    <body>
+        <script>
+            const o = {}; 
+            Object.defineProperty(o, 'a', {
+            value: 37,
+            writable: true,
+            enumerable: true,
+            configurable: true
+            });
+
+            let bValue = 38;
+            Object.defineProperty(o, 'b', {
+            get() { return bValue; },
+            set(newValue) { bValue = newValue; },
+            enumerable: true,
+            configurable: true
+            });
+            o.b;
+
+            Object.defineProperty(o, 'conflict', {
+            value: 0x9f91102,
+            get() { return 0xdeadbeef; }
+            });
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Property flags and descriptors Example
+        </title>
+    </head>
+
+    <body>
+        <script>
+
+            console.log("Using Object.getOwnPropertyDescriptor");
+            let o, d;
+
+                o = { foo:17 };
+                d = Object.getOwnPropertyDescriptor(o, 'foo');
+                console.log(d);
+
+
+                o = { bar: 42 };
+                d = Object.getOwnPropertyDescriptor(o, 'bar');
+                o = { [Symbol.for('baz')]: 73 }
+                d = Object.getOwnPropertyDescriptor(o, Symbol.for('baz'));
+                console.log(d);
+
+
+                o = {};
+                Object.defineProperty(o, 'qux', {
+                value: 8675309,
+                writable: false,
+                enumerable: false
+                });
+                d = Object.getOwnPropertyDescriptor(o, 'qux');
+                console.log(d);
+
+        </script>
+    </body>
+</html>

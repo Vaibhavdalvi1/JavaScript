@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Classes Example</title>
+    </head>
+   <h2> Classes basic practice exapmle</h2>
+    <body>
+        <script>
+            class RailwayForm {
+
+                constructor(GivenName, TrainNo, Address){
+
+                    console.log(GivenName + "" + TrainNo +"" + Address)
+                    this.name = GivenName
+                    this.trainno = TrainNo
+                    this.address = Address
+                }
+
+                preview(){
+                    console.log(this.name + ":your form is for train number:" + this.trainno + " and your address is" + this.address)
+                }
+
+                submit(){
+
+                    console.log(this.name + ":Your form is submitted for train number:" + this.trainno)
+                }
+
+                cancel(){
+
+                    console.log(this.name + "this form is cancelled for train number:" + this.trainno)
+                    this.train = 0
+                }
+
+                }
+
+                let Form1 = new RailwayForm("Vaibhav"," " ,12345," ", "pangari bk,Sinnar,Nashik-422104")
+                let Form2 = new RailwayForm("Rakesh"," ",13425," ","Wavi,sinnar,Nashik-422103")
+                let Form3 = new RailwayForm("Rohit"," ",14536," ", "Sangamaner,Sangamaner,Nagar-422203")
+                let Form4 = new RailwayForm("Somnath"," ", 22345," ", "sinnar,Sinnar,Nashik-422103")
+                let Form5 = new RailwayForm("Hari"," ",62345," ", "Musalgaon,Sinnar,Nashik-422106")
+                
+
+                Form1.preview()
+                Form1.submit()
+                Form2.cancel()
+                Form3.submit()
+                Form4.preview()
+                Form4.submit()
+                Form5.preview()
+                Form5.submit()
+                Form5.cancel()
+
+            
+        </script>
+      </body>
+</html>

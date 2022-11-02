@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Prototype Examples2
+        </title>
+
+    </head>
+    <h2>Writing doesn’t use prototype</h2>
+
+    <body>
+        <script>
+
+            let animal ={
+                eats:true,
+                sleep:true,
+                walk(){
+                    
+                }
+            };
+
+            let rabbit = {
+                name:"white rabbit",
+                jumps:true,
+              __proto__:animal
+            };
+
+                rabbit.walk = function() {
+                     console.log("Rabbit! Bounce-bounce!");
+              };
+
+            console.log(rabbit.jumps);
+            console.log(rabbit.eats);
+            console.log(rabbit.walk());
+            
+
+
+        </script>
+    </body>
+</html>
