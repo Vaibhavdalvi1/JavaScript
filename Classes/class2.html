@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Use class inheritance and static property </title>
+        
+    </head>
+    <h1>Employee Info</h1>
+    <body>
+        <script>
+            class employee{
+
+                static id = 1;
+                constructor(name,age,salary){
+                this.empname = name;
+                this.empage = age;
+                this.empsalary = salary;
+                this.employeeid = employee.id++
+                }
+
+                Info(){
+                    document.write(`<h3>Employee Info</h3>)
+                                   ID:${this.employeeid}<br>
+                                   Name:${this.empname}<br>
+                                   Age:${this.empage}<br>
+                                   Salary:${this.empsalary}<br>`)
+
+                }
+            }
+                
+                class manager extends employee{
+                     Info(){
+                        let travellingAllowance = 1000;
+                        let PhoneAllowance = 300;
+                        let totalsalary = this.empsalary + travellingAllowance + PhoneAllowance;
+
+
+                        document.write(`<h3>Manager Info</h3>)
+                                   ID:${this.employeeid}<br>
+                                   Name:${this.empname}<br>
+                                   Age:${this.empage}<br>
+                                   Salary:${totalsalary}<br>`)
+
+                    }
+
+                }
+
+                let Manager1 = new  manager("Rahul",26,22000);
+                let Manager2 = new  manager("R0hit",27,25000);
+                let Manager3 = new  manager("Prem",25,20000);
+                let Manager4 = new  manager("Prattesh",28,35000);
+                let Employee1 = new employee("Rutvik",23,12000);
+                let Employee2 = new employee("Vaibhav",21,15000);
+                let Employee3 = new employee("Trushant",24,20000);
+                let Employee4 = new employee("Mayur",22,15000);
+                
+
+                 Manager1.Info();
+                 Manager2.Info();
+                 Manager3.Info();
+                 Manager4.Info(); 
+                 Employee1.Info(); 
+                 Employee2.Info(); 
+                 Employee3.Info(); 
+                 Employee4.Info();
+
+        </script>
+    </body>
+</html>
