@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Use Generator function
+    </title>
+</head>
+<body>
+    <script>
+        function *generateit(){
+
+            yield 'PHP';
+            yield'Node';
+            yield'Angular';
+            yield'React';
+            yield[1111,2222,33333,44444,555555];
+            yield (2000)*20;
+
+            let result = (yield)*50;
+            console.log(`Result:${result}`);  // we can write also like this method
+
+            let yieldarray = [yield,yield,yield,yield];
+            console.log(`Result:${yieldarray}`);      // we can also write yield in array 
+            console.log(`Result:${yieldarray[2]}`);   // we can also get one array value
+
+        }
+
+        let g = generateit();
+
+        
+
+        console.log(g.next().value);
+        console.log(g.next().value);
+        console.log(g.next().value);
+        console.log(g.next().value);
+        console.log(g.next().value);
+        console.log(g.next().value);
+        g.next();
+
+        g.next(5000);
+        g.next(6000);
+        g.next(7000);
+        g.next(8000);
+        g.next(9000);
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

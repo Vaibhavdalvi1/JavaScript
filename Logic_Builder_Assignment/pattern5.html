@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Number Pattern4
+        </title>
+    </head>
+    <h1>Reverse Triangle3</h1>
+    <body>
+        <script>
+
+            let n = 4;
+            let x = "";
+
+
+            for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n - i + 1; j++) {
+                x += j ;
+            }
+            x += "\n";
+
+        }
+
+            for(let i = 1; i<=n; i++){
+                
+
+                for(let j = 1; j<=i; j++){
+
+                    x+= j;
+                }
+
+                x += "\n";
+        }
+            console.log(x);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Iterators example
+        </title>
+    </head>
+    <body>
+        <script>
+
+            function numberIterator(arr){
+
+                var nextNum = 0;
+
+                return {
+                    next(){
+
+                    if(nextNum < arr.length){
+                        return{
+
+                        value : arr[nextNum++],
+                        done : false
+                        }
+
+                    }else {
+
+                        return{
+                            done : true
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+                    let numbers = [1000,2000,3000,4000,5000,6000,7000];
+
+                    let num = numberIterator(numbers);
+
+                    console.log(num.next());
+                    console.log(num.next());
+                    console.log(num.next());
+                    console.log(num.next());
+                    console.log(num.next());
+                    console.log(num.next());
+                    console.log(num.next());
+                    console.log(num.next());
+
+
+        </script>
+    </body>
+</html>
