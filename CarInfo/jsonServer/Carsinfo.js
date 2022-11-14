@@ -6,7 +6,7 @@
           "capacity": 7
         },
         {
-          "color": "red",
+          "color": "ankush",
           "type": "station wagon",
           "registration": new Date('2018-03-03'),
           "capacity": 3
